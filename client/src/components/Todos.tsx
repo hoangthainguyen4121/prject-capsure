@@ -2,6 +2,7 @@ import dateFormat from 'dateformat'
 import { History } from 'history'
 import update from 'immutability-helper'
 import * as React from 'react'
+import Swal from 'sweetalert2';
 import {
   Button,
   Checkbox,
@@ -79,6 +80,23 @@ export class Todos extends React.PureComponent<TodosProps, TodosState> {
         dueDate: todo.dueDate,
         done: !todo.done
       })
+      
+      if (todo.done == false) {
+        Swal.fire({
+          title: 'You did Great job!',
+          text: 'Your To Do was completed successfully',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        });
+      }
+      else {
+        Swal.fire({
+          title: 'Need more effort..',
+          text: 'You can do it !',
+          icon: 'info',
+          confirmButtonText: 'OK'
+        });
+      }
       this.setState({
         todos: update(this.state.todos, {
           [pos]: { done: { $set: !todo.done } }

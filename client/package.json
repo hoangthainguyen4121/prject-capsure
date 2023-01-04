@@ -12,7 +12,8 @@
     "react-scripts": "^4.0.3",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "sweetalert2": "^11.6.16"
   },
   "devDependencies": {
     "@types/dateformat": "^3.0.1",

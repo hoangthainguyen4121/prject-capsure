@@ -12,12 +12,9 @@
     },
     "done": {
       "type": "boolean"
-    },
-    "uploadImage": {
-      "type": "boolean"
     }
   },
-  "required": [
+  "required": [ 
     "name",
     "dueDate",
     "done"
